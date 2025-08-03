@@ -1,0 +1,102 @@
+.project{
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background-color: #000814;
+  margin-top: 20px;
+  color: #ffffff;
+}
+/* Grid container for project cards */
+.project-content-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  
+}
+
+
+
+/* Individual project card */
+.project-content {
+  background-color:#001D3D;
+  border: 5px solid ;
+  padding: 20px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 1, 0.06);
+  transition: transform 0.2s;
+} 
+  
+
+
+
+
+.project-content:hover {
+  transform: scale(1.01);
+  background-color: #003566;
+
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #FFC300;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Tech stack text */
+.project-content p {
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+/* Button container */
+.project-links {
+  margin-top: 10px;
+}
+
+/* Buttons */
+.project-links .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 10px;
+  background: linear-gradient(-45deg , rgba(106, 210, 217, 1) 0%, rgb(41, 151, 206) 51%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.project-links .btn:hover {
+   background: linear-gradient(-45deg , rgba(106, 210, 217, 1) 0%, rgb(41, 151, 206) 90%);
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .section-heading {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .resume {
+    padding: 20px 10px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+}

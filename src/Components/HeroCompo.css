@@ -1,0 +1,162 @@
+.hero-section {
+  display: flex;
+  height: 80vh;
+
+  padding: 1.5rem;
+  /* background-color: red; */
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    /* background-color: #a43636; */
+    font-family: 'Poppins', sans-serif; 
+    line-height: 68px;  
+    
+
+}
+.hero-header{
+    font-size: 32px;
+    font-weight: 400;
+    /* background-color: #523535; */
+    color: #ffbc3b;
+   
+}
+#iam{
+   
+  
+    color: white;
+}
+
+.highlight {
+    font-size: 67.5px;
+    font-weight: 800; 
+    /* color: linear-gradient(to right, #00f6ff, #00ff90);
+   -webkit-text-fill-color: transparent; */
+}
+.subheading{
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+
+
+
+
+.cta-button {
+   
+    align-items: center;
+   
+   
+}
+
+.cta-button button {
+    
+    background: radial-gradient(circle, rgba(106, 210, 217, 1) 0%, rgb(41, 151, 206) 51%);
+    color: #fff;
+    height: 4rem;
+    width: 8rem;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    border-radius: 20px;
+    
+    
+}
+
+.cta-button button:hover {
+    
+    background: radial-gradient(circle, #e3d7c0 0%, #ffbc3b 81%);
+    color: #000;
+    text-shadow: 0px 0px 1px  #dddddd
+    
+}
+
+
+
+
+
+
+
+
+
+.hero-image-container{
+    position: relative;
+    width: 522px;
+    height: 80vh;
+    /* background-color: #0e4a1f; */
+    border-radius: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+  object-fit: cover;
+  border-radius: 50%;
+  right: 10px;
+  bottom: 20px;
+  box-shadow: 0 0px 55px  #ffbc3b
+}
+
+.hero-image {
+  transition: all 0.3s ease;
+}
+.hero-image:hover {
+  box-shadow: 0 0px 75px  #ffbc3b
+
+
+}
+
+
+@media (max-width: 640px) {
+    .hero-image-container{
+    display: none;
+    
+}
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    line-height: 48px;
+  }
+
+  .hero-header {
+    font-size: 24px;
+  }
+
+  .highlight {
+    font-size: 48px;
+  }
+
+  .subheading {
+    font-size: 28px;
+  }
+
+  .cta-button {
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+
+  .cta-button button {
+    height: 3.5rem;
+    width: 100%;
+    max-width: 200px;
+  }
+}

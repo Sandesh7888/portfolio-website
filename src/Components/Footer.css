@@ -1,0 +1,36 @@
+.sticky_element {
+  position: fixed;
+  top: 220px;
+  left: -5px;
+  z-index: 999;
+}
+
+.social {
+  display: inline-block;
+  background-color: #f99e26;
+  height: auto;
+}
+
+.social ul {
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  list-style-type: none;
+  padding: 10px 15px;
+  background-color: #f88c02;
+  transition: 0.5s;
+}
+
+
+.social li:hover {
+  transform: translateX(20px);
+  background-color: #f99e26;
+}
+
+.text-white {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}

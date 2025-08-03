@@ -1,0 +1,125 @@
+/* Navbar container */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+/* Logo size */
+.logo {
+  width: 124px;
+  height: 32px;
+  background-color: #000000;
+}
+
+/* Desktop nav links */
+.nav-links {
+  list-style: none;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav-links {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+  }
+}
+
+.nav-item {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 18px;
+  color: #b0b0b0; 
+}
+
+.nav-item.active {
+  color: #ffffff;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+.nav-item:hover{
+    color: #ffbc3b;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.mobile-menu {
+  display: flex;
+}
+
+@media (min-width: 640px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+/* Mobile sidebar */
+.sidebar {
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #000000, #1a1a1a); /* approximation of black-gradient */
+  position: absolute;
+  top: 0.2rem;
+  right: 1.5rem;
+  margin: 0.5rem 1rem;
+  min-width: 140px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex: 1;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: #b0b0b0;
+}
+
+.sidebar-item.active {  
+  color: #ffffff;
+}
+.sidebar-item:hover{
+    color: #ffbc3b;
+}
+
+
+.sidebar-item:last-child {
+  margin-bottom: 0;
+}

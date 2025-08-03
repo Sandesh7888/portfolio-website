@@ -1,0 +1,75 @@
+.footer {
+  background-color: var(--color4);
+  color: #f1f1f1;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(./image/dark-gray.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer-left {
+  flex: 1 1 100%;
+  margin-bottom: 10px;
+}
+
+.footer-icons {
+  flex: 1 1 100%;
+  margin-bottom: 10px;
+}
+
+.icons {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.icons li {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: black;
+  background-color: white;
+  list-style: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icons li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  
+}
+
+.icons1:hover { color: #ce24c5; }
+.icons2:hover { color: #f11212; }
+.icons3:hover { color: #1f00ce; }
+.icons4:hover { color: #0aaadb; }
+.icons5:hover { color: #1749eb; }
+
+/* Responsive */
+@media (min-width: 768px) {
+  .footer-left,
+  .footer-icons {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
