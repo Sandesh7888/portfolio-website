@@ -8,6 +8,7 @@ import Resume from "./Resume"
 import Skills from "./Skills"
 import Navbar from "./NavBar"
 import Footer2 from "./Footer2"
+import Toggle from "./Toggle"
 // import Section from "/Section"
 
 export{
@@ -20,6 +21,7 @@ export{
     Resume,
     Skills,
     Footer2,
+    Toggle,
     // Section,
 
 };

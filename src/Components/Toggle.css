@@ -1,0 +1,33 @@
+.app-container {
+
+  text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  /* padding: 2rem; */
+}
+
+/* .day {
+  background-color: #f8f9fa;
+  color: #212529;
+  
+}
+
+.night {
+  background-color: #1e1e2f;
+  color: #f8f9fa;
+} */
+
+.toggle-btn {
+  padding: 5px 20px;
+  border: none;
+
+  
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.05);
+  /* background-color: #3b9bd6; */
+}

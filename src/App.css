@@ -22,7 +22,7 @@
 
 
 .mainBody{
-    background-color: var(--color5);
+    /* background-color: var(--color5); */
     overflow: hidden;
     width: 100%;
     scroll-behavior: smooth;
@@ -61,7 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
 }
 
 /* Responsive padding */

@@ -8,6 +8,12 @@ import gsap from 'gsap';
 const Resume = () => {
   useGSAP(() => {
     const resumeSections = gsap.utils.toArray("#rc");
+    gsap.from(".section-heading-box", {
+      opacity: 0,
+      scaleX: 0.5,
+      duration: 1,
+      ease: "bounce.easeOut",
+    });
     gsap.from(resumeSections, {
       y: 100,
       opacity: 0,

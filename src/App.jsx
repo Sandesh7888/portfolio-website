@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { Navbar, About, Contact, Footer,Footer2, HeroCompo, Project, Resume, Skills } from './Components';
+import { Navbar, About, Contact, Footer,Footer2, HeroCompo, Project, Resume, Skills,Toggle } from './Components';
 
 const App = () => (
   <div className="mainBody">
-    
+    {/* <Toggle  /> */}
 
     <div className="NavBarMainContainer">
       <div className="inner-container">

@@ -4,6 +4,7 @@ import { close, logo, menu } from '../assets';
 import './Navbar.css';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import Toggle from './Toggle';
 
 const Navbar = () => {
   const [active, setActive] = useState('Home');
@@ -29,6 +30,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* <img src={logo} alt="logo" className="logo" /> */}
+      <Toggle />
 
       <ul className="nav-links">
         {navLinks.map((nav) => (
