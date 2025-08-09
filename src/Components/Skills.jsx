@@ -1,8 +1,28 @@
 import React from "react"
 import "./Skills.css"
 import {skillsDetails} from "../constants"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Skills = () => {
+  useGSAP(() => {
+    const skillBars = gsap.utils.toArray(".skill-fill");
+    gsap.from(skillBars, {
+      scaleX: 0,
+      duration: 0.8,
+         //   ease: "bounce.out",
+      // stagger: 0.2,
+      transformOrigin: "left",
+      scrollTrigger: {
+        trigger: ".skills-section",
+        start: "top 60%",
+        end: "bottom 80%",
+        // scrub: 1,
+        toggleActions: "play none none reverse",
+        markers: false,
+      }
+    });
+  });
   return (
     <div className="skills" id="skills-call">
       <div className="section-heading-box">

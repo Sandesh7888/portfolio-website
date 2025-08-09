@@ -2,8 +2,37 @@ import React from 'react';
 import './About.css';
 import { aboutMe } from '../constants';
 import { CV,photo } from "../assets";
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
 
 const About = () => {
+
+
+
+  useGSAP(() => {
+    gsap.from(".section-heading", {
+      opacity: 0,
+      scaleX: 0.5,
+      duration: 1,
+      ease: "bounce.easeOut",
+      scrollTrigger: {
+        trigger: ".aboutMe",
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: 1,
+        markers: false,
+      }
+    });
+
+    gsap.from(".aboutMe", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+    });
+  }, []);
+
   return (
     <div className="aboutMe" id='about-call'>
      

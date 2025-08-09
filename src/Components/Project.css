@@ -1,38 +1,35 @@
-.project{
+.project {
   font-family: 'Poppins', sans-serif;
   padding: 20px;
   background-color: #000814;
   margin-top: 20px;
   color: #ffffff;
 }
-/* Grid container for project cards */
-.project-content-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+/* Flex container for project cards */
+.project-content-box1 {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  
+  justify-content: center;
 }
-
-
 
 /* Individual project card */
 .project-content {
-  background-color:#001D3D;
-  border: 5px solid ;
+  background-color: #001D3D;
+  border: 5px solid;
   padding: 20px 25px;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 1, 0.06);
   transition: transform 0.2s;
-} 
-  
-
-
-
+  flex: 1 1 320px; 
+  max-width: 400px; 
+  position: relative;
+}
 
 .project-content:hover {
   transform: scale(1.01);
   background-color: #003566;
-
 }
 
 .project-title {
@@ -72,7 +69,7 @@
 }
 
 .project-links .btn:hover {
-   background: linear-gradient(-45deg , rgba(106, 210, 217, 1) 0%, rgb(41, 151, 206) 90%);
+  background: linear-gradient(-45deg , rgba(106, 210, 217, 1) 0%, rgb(41, 151, 206) 90%);
 }
 
 /* Tablet view */
@@ -98,5 +95,10 @@
 
   .project-title {
     font-size: 1.2rem;
+  }
+
+  .project-content {
+    flex: 1 1 100%; /* full width on small screens */
+    max-width: 100%;
   }
 }

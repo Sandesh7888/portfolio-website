@@ -2,8 +2,26 @@ import React from 'react';
 import { CV } from "../assets";
 import { education, experiences, certifications } from "../constants";
 import "./Resume.css";
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Resume = () => {
+  useGSAP(() => {
+    const resumeSections = gsap.utils.toArray("#rc");
+    gsap.from(resumeSections, {
+      y: 100,
+      opacity: 0,
+      duration: 0.8,
+      // stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".resume",
+        start: "top 60%",
+        end: "bottom 80%",
+        toggleActions: "play none none reverse",
+        markers: false,
+      }
+    });
+  });
   return (
     <div className="resume" id='resume-call'>
       <div className="section-heading-box">
@@ -15,7 +33,7 @@ const Resume = () => {
         <h2 className="sub-heading">Education</h2>
         <div className="education-box">
           {education.map((edu, index) => (
-            <div key={index} className="resume-card">
+            <div key={index} id='rc' className="resume-card">
               <h3>{edu.degree} <small>({edu.year})</small></h3>
               <h4>{edu.institution}</h4>
               <p><strong>Branch:</strong> {edu.branch}</p>

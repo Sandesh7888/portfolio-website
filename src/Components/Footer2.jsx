@@ -23,7 +23,7 @@ const Footer2 = () => {
       <div className="footer-container">
         {/* Left: Copyright */}
         <div className="footer-left">
-          <p>© {new Date().getFullYear()} Sandesh Karad. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Create By <span style={{ color: '#61dafb' }}>Sandesh Karad</span>.</p>
         </div>
 
         {/* Center: Social Icons */}
