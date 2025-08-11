@@ -40,8 +40,11 @@ export const skillsDetails = [
           { name: "CSS", level: 70 },
           { name: "JavaScript", level: 60 },
           { name: "Java", level: 60 },
-          { name: "React.js", level: 60 },
           { name: "SQL", level: 80 },
+          { name: "React.js", level: 60 },
+          { name: "Node.JS", level: 70 },
+          { name: "Express.js", level: 80 },
+          { name: "MongoDB", level: 60 },
         ]
 
 export const aboutMe = {

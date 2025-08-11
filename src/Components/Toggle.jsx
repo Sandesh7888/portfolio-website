@@ -10,8 +10,9 @@ const Toggle = () => {
     // Initial animation on mount
     gsap.fromTo(
       ".mainBody",
+      {  backgroundColor: "var(--light)", color: "var(--color5)" }, 
       { backgroundColor: "var(--color5)", color: "var(--light)" },
-      {  backgroundColor: "var(--light)", color: "var(--color5)" }
+      
     );
   }, []);
 

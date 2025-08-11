@@ -2,34 +2,59 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 import { photo } from "../assets";
 import "./HeroCompo.css";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 const Hero = () => {
   const heroRef = useRef(null);
   const imageRef = useRef(null);
+  const subtitleRef = useRef(null);
 
   useGSAP(() => {
+    const roles = [
+      "Web Developer",
+      "Full Stack Developer",
+      "Java Developer",
+      "ReactJS Specialist",
+      "MERN Stack Engineer",
+    ];
+
+    // Animate hero container
     gsap.from(heroRef.current, {
       x: -500,
-      zIndex: -1,
       opacity: 0,
-      duration: 1.2,
       rotate: -30,
       scaleY: 2.5,
+      duration: 1.2,
       ease: "power2.out",
-      stagger: 0.2,
       scrollTrigger: {
         trigger: heroRef.current,
         start: "top 80%",
-        end: "bottom 60%",
         toggleActions: "play none none reverse",
-        markers: false,
       },
     });
 
+    // Cycle roles
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
+    roles.forEach((role) => {
+      tl.to(subtitleRef.current, {
+        text: role,
+        duration: 1,
+        ease: "power2.inOut",
+      }).to(subtitleRef.current, {
+        opacity: 0,
+        duration: 0.3,
+        delay: 1.2,
+        onComplete: () => {
+          subtitleRef.current.style.opacity = 1; // reset for next loop
+        },
+      });
+    });
+
+    // Animate image
     gsap.from(imageRef.current, {
       x: 50,
       rotate: 5,
@@ -40,9 +65,7 @@ const Hero = () => {
       scrollTrigger: {
         trigger: imageRef.current,
         start: "top 80%",
-        end: "bottom 60%",
         toggleActions: "play none none reverse",
-        markers: false,
       },
     });
   }, []);
@@ -58,7 +81,9 @@ const Hero = () => {
             </span>{" "}
             <span className="highlight">Sandesh</span>
           </h1>
-          <h2 className="subheading">Full Stack Developer.</h2>
+          <h2 className="subheading" ref={subtitleRef}>
+            Full Stack Developer.
+          </h2>
         </div>
       </div>
 
@@ -68,10 +93,6 @@ const Hero = () => {
           alt="Portrait of Sandesh Karad"
           className="hero-image"
         />
-      </div>
-
-      <div className="hero-mobile-only">
-        {/* Optional mobile content */}
       </div>
     </section>
   );

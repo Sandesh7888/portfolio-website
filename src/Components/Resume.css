@@ -5,6 +5,7 @@
   background-color: var(--color5);
   margin-top: 20px;
   color: #ffffff;
+  border-radius: 5px;
 }
 
 .section-heading {
