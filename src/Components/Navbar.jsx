@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* <img src={logo} alt="logo" className="logo" /> */}
-      <Toggle />
+      <Toggle  />
 
       <ul className="nav-links">
         {navLinks.map((nav) => (

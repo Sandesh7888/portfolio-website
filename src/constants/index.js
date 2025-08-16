@@ -37,13 +37,13 @@ export const socialMedia = [
 
 export const skillsDetails = [
           { name: "HTML", level: 80 },
-          { name: "CSS", level: 70 },
-          { name: "JavaScript", level: 60 },
-          { name: "Java", level: 60 },
+          { name: "CSS", level: 80 },
+          { name: "JavaScript", level: 85 },
+          { name: "Java", level: 65 },
           { name: "SQL", level: 80 },
-          { name: "React.js", level: 60 },
-          { name: "Node.JS", level: 70 },
-          { name: "Express.js", level: 80 },
+          { name: "React.js", level: 70 },
+          { name: "Node.JS", level: 60 },
+          { name: "Express.js", level: 60 },
           { name: "MongoDB", level: 60 },
         ]
 

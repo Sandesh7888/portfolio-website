@@ -9,6 +9,7 @@ import Skills from "./Skills"
 import Navbar from "./NavBar"
 import Footer2 from "./Footer2"
 import Toggle from "./Toggle"
+import Animation from "./Animation"
 // import Section from "/Section"
 
 export{
@@ -17,6 +18,7 @@ export{
     Contact,
     Footer,
     HeroCompo,
+    Animation,
     Project,
     Resume,
     Skills,
