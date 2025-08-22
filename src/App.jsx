@@ -5,7 +5,7 @@ import { Navbar, About, Contact, Footer,Footer2, HeroCompo, Project, Resume, Ski
 const App = () => (
   <div className="mainBody">
     {/* <Toggle  /> */}
-    <Animation />
+    {/* <Animation /> */}
 
     <div className="NavBarMainContainer">
       <div className="inner-container">
