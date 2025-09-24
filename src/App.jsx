@@ -4,8 +4,8 @@ import { Navbar, About, Contact, Footer,Footer2, HeroCompo, Project, Resume, Ski
 
 const App = () => (
   <div className="mainBody">
-    {/* <Toggle  /> */}
-    {/* <Animation /> */}
+    <Toggle  />
+   
 
     <div className="NavBarMainContainer">
       <div className="inner-container">
@@ -22,6 +22,7 @@ const App = () => (
     <div className="outer-container">
       <div className="inner-container">
         <About />
+        
         <Resume />
         <Skills />
         <Project />
