@@ -31,7 +31,6 @@ const Navbar = () => {
     <nav className="navbar">
       {/* <img src={logo} alt="logo" className="logo" /> */}
       <Toggle  />
-
       <ul className="nav-links">
         {navLinks.map((nav) => (
           <li
@@ -68,7 +67,6 @@ const Navbar = () => {
             </ul>
           </div>
         )}
-        
       </div>
     </nav>
   );

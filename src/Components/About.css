@@ -93,6 +93,8 @@
   }
 }
 
+
+
 /* Resume Download Button */
 .resume-download-btn {
   display: inline-block;
@@ -109,7 +111,7 @@
 
 .resume-download-btn:hover {
   background: radial-gradient(circle, rgba(106, 210, 217, 1) 0%, rgb(41, 151, 206) 51%);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 

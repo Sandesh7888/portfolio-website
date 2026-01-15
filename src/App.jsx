@@ -4,7 +4,7 @@ import { Navbar, About, Contact, Footer,Footer2, HeroCompo, Project, Resume, Ski
 
 const App = () => (
   <div className="mainBody">
-    <Toggle  />
+   
    
 
     <div className="NavBarMainContainer">

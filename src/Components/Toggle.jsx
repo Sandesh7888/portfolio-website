@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Toggle.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -6,32 +6,30 @@ import gsap from "gsap";
 const Toggle = () => {
   const [isNight, setIsNight] = useState(false);
 
-  useGSAP(() => {
-    // Initial animation on mount
-    gsap.fromTo(
-      ".mainBody",
-      {  backgroundColor: "var(--light)", color: "var(--color5)" }, 
-      { backgroundColor: "var(--color5)", color: "var(--light)" },
-      
-    );
+  useEffect(() => {
+    const saved = localStorage.getItem('theme') === 'dark';
+    setIsNight(saved);
+    document.documentElement.classList.toggle('dark', saved);
   }, []);
 
   const handleToggle = () => {
-    setIsNight(!isNight);
+    const nextIsNight = !isNight;
+    setIsNight(nextIsNight);
+    document.documentElement.classList.toggle('dark', nextIsNight);
+    localStorage.setItem('theme', nextIsNight ? 'dark' : 'light');
 
     gsap.to(".mainBody", {
       duration: 1,
-      
-      backgroundColor: isNight ? "var(--light)" : "var(--color5)",
-      color: isNight ? "var(--color5)" : "var(--light)",
+      backgroundColor: nextIsNight ? "#0f0f23" : "#f8fafc",
+      color: nextIsNight ? "#f8fafc" : "#0f0f23",
       ease: "power2.inOut"
     });
   };
 
   return (
-    <div className={`app-container ${isNight ? "night" : "day"}`}>
+    <div className="app-container">
       <button className="toggle-btn" onClick={handleToggle}>
-        {isNight ? "🌙" : "☀ "}
+        {isNight ? "🌙" : "☀️"}
       </button>
     </div>
   );

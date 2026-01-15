@@ -3,7 +3,7 @@ import React from "react";
 
 const Animation = () => {
   return (
-    <div className="Animation" id="particlesjs">
+    <div className="Animation" id="particlescdjs">
       <Particles
         params={{
           particles: {

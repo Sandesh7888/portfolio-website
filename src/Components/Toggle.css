@@ -1,9 +1,24 @@
 .app-container {
-  display: none;
+
 
   text-align: center;
   transition: background-color 0.5s ease, color 0.5s ease;
   /* padding: 2rem; */
+}
+.aboutMe {
+  scroll-margin-top: 100px; /* Smooth anchor scroll offset */
+}
+
+.section-heading {
+  background: linear-gradient(135deg, var(--accent), #ffbc3b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resume-download-btn:hover span {
+  transform: translateX(4px);
+  display: inline-block;
 }
 
 /* .day {
