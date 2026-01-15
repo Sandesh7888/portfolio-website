@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.css';
-import { Navbar, About, Contact, Footer,Footer2, HeroCompo, Project, Resume, Skills,Toggle ,Animation} from './Components';
+import { Navbar, About, Contact, Footer, Footer2, HeroCompo, Project, Resume, Skills } from './Components';
 
 const App = () => (
   <div className="mainBody">
-   
-   
-
     <div className="NavBarMainContainer">
       <div className="inner-container">
-        <Navbar />
+        <Navbar /> {/* Toggle lives inside Navbar */}
       </div>
     </div>
 
@@ -22,17 +19,15 @@ const App = () => (
     <div className="outer-container">
       <div className="inner-container">
         <About />
-        
         <Resume />
         <Skills />
         <Project />
         <Contact />
         <Footer />
-        <Footer2/>
+        <Footer2 />
       </div>
     </div>
   </div>
 );
 
 export default App;
-
