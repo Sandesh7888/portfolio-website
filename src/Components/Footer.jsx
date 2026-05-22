@@ -1,31 +1,38 @@
-import React from 'react';
-import './Footer.css';
-import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa';
+import { Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-const Footer = () => {
-  const icons = [
-    { icon: <FaLinkedin />, link: 'https://linkedin.com' },
-    { icon: <FaInstagram />, link: 'https://instagram.com' },
-    { icon: <FaGithub />, link: 'https://github.com' },
-    { icon: <FaTwitter />, link: 'https://twitter.com' },
-  ];
-
+export default function Footer() {
   return (
-    <section className="sticky_element">
-      <div className="social">
-        <ul>
-          {icons.map((item, index) => (
-            <li key={index}>
-              <a href={item.link} key={index}  target="_blank" rel="noopener noreferrer">
-                {item.icon}
-              </a>
-             
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-};
+    <footer className="bg-secondary/30 border-t border-color-border pt-12 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0 text-center md:text-left">
+            <a href="#" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-2 block">
+              SE.
+            </a>
+            <p className="text-text-muted text-sm max-w-sm">
+              Architecting the future, one line of code at a time. Building scalable solutions for modern problems.
+            </p>
+          </div>
 
-export default Footer;
+          <div className="flex flex-col items-center md:items-end">
+            <div className="flex space-x-6 mb-4">
+              <a href="#" className="text-text-muted hover:text-primary transition-colors" aria-label="GitHub">
+                <FaGithub size={24} />
+              </a>
+              <a href="#" className="text-text-muted hover:text-primary transition-colors" aria-label="LinkedIn">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="mailto:hello@example.com" className="text-text-muted hover:text-primary transition-colors" aria-label="Email">
+                <Mail size={24} />
+              </a>
+            </div>
+            <p className="text-text-muted text-sm">
+              &copy; {new Date().getFullYear()} Software Engineer. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

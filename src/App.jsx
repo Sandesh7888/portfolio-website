@@ -1,33 +1,29 @@
 import React from 'react';
-import './App.css';
-import { Navbar, About, Contact, Footer, Footer2, HeroCompo, Project, Resume, Skills } from './Components';
+import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
+import About from './Components/About';
+import Skills from './Components/Skills';
+import Project from './Components/Project';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
-const App = () => (
-  <div className="mainBody">
-    <div className="NavBarMainContainer">
-      <div className="inner-container">
-        <Navbar /> {/* Toggle lives inside Navbar */}
-      </div>
-    </div>
-
-    <div className="outer-container">
-      <div className="inner-container">
-        <HeroCompo />
-      </div>
-    </div>
-
-    <div className="outer-container">
-      <div className="inner-container">
-        <About />
-        <Resume />
-        <Skills />
-        <Project />
-        <Contact />
+const App = () => {
+  return (
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col selection:bg-primary selection:text-primary-foreground">
+        <Navbar />
+        <main className="flex-grow">
+          <Hero />
+          <About />
+          <Skills />
+          <Project />
+          <Contact />
+        </main>
         <Footer />
-        <Footer2 />
       </div>
-    </div>
-  </div>
-);
+    </ThemeProvider>
+  );
+};
 
 export default App;

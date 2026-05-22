@@ -1,41 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --text-primary: #0f0f23;
-  --text-secondary: #64748b;
-  --accent: #ffbc3b;
-  --border: #e2e8f0;
-  --card-bg: #ffffff;
-  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+@theme {
+  --color-background: var(--bg);
+  --color-foreground: var(--text-main);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-border: var(--border-color);
+  --color-card: var(--card-bg);
 }
 
-.dark {
-  --bg-primary: #0f0f23;
-  --bg-secondary: #1e1e2e;
-  --text-primary: #f8fafc;
-  --text-secondary: #b0b0b0;
-  --accent: #ffbc3b;
-  --border: #334155;
-  --card-bg: #1e1e2e;
-  --shadow: 0 10px 30px rgba(0,0,0,0.3);
+@layer base {
+  :root {
+    --bg: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #e2e8f0;
+    --accent: #10b981;
+    --border-color: #cbd5e1;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+  }
+
+  .dark {
+    --bg: #09090b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    --accent: #10b981;
+    --border-color: #334155;
+    --card-bg: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+  }
 }
 
-.mainBody {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  transition: all 0.5s ease;
+@layer utilities {
+  .glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
 }
 
-.navbar, .nav-item, .sidebar-item {
-  color: var(--text-secondary);
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
-.nav-item.active, .sidebar-item.active {
-  color: var(--text-primary);
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
-.nav-item:hover, .sidebar-item:hover {
-  color: var(--accent);
+html {
+  scroll-behavior: smooth;
 }
