@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Download, Mail } from 'lucide-react';
 
 export default function Hero() {
   const containerVariants = {
@@ -33,15 +33,7 @@ export default function Hero() {
           animate="visible"
           className="text-center flex flex-col items-center"
         >
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-3 mb-6">
-            <span className="bg-secondary text-primary px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase border border-color-border">
-              Software Engineer
-            </span>
-            <div className="flex items-center space-x-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium border border-accent/20">
-              <CheckCircle2 size={16} />
-              <span>Available for New Opportunities</span>
-            </div>
-          </motion.div>
+
 
           <motion.h1
             variants={itemVariants}
